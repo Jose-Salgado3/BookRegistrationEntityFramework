@@ -76,6 +76,8 @@
     <Compile Include="Customer.cs">
       <DependentUpon>BookRegModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomerDb.cs" />
+    <Compile Include="CustomerPartial.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
