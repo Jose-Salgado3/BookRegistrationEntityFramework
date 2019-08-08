@@ -16,5 +16,21 @@ namespace BookRegistrationEntityFramework
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            PopulateCustomerList();
+        }
+
+        /// <summary>
+        /// Populates customer list from the database
+        /// </summary>
+        private void PopulateCustomerList()
+        {
+            List<Customer> customers = CustomerDb.GetCustomers();
+
+            cboCustomers.DataSource = customers;
+            cboCustomers.DisplayMember = nameof(Customer.FullName);
+        }
     }
 }

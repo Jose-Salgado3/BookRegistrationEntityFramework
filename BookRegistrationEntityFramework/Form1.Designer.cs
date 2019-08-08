@@ -28,20 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cboCustomers = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
+            // 
+            // cboCustomers
+            // 
+            this.cboCustomers.FormattingEnabled = true;
+            this.cboCustomers.Location = new System.Drawing.Point(65, 68);
+            this.cboCustomers.Name = "cboCustomers";
+            this.cboCustomers.Size = new System.Drawing.Size(121, 21);
+            this.cboCustomers.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cboCustomers);
             this.Name = "Form1";
             this.Text = "  ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cboCustomers;
     }
 }
 
