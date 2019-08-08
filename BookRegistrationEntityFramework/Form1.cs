@@ -20,6 +20,15 @@ namespace BookRegistrationEntityFramework
         private void Form1_Load(object sender, EventArgs e)
         {
             PopulateCustomerList();
+            PopulateBookList();
+        }
+
+        private void PopulateBookList()
+        {
+            List<Book> books = BookDb.GetBooks();
+
+            cboBooks.DataSource = books;
+            cboBooks.DisplayMember = nameof(Book.Title);
         }
 
         /// <summary>
